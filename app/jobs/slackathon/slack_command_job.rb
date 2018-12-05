@@ -17,7 +17,7 @@ module Slackathon
         klass.dispatch_interaction(params)
       end
 
-      say(url, body)
+      say(url, body) if body
     rescue => e
       say(url, {
         response_type: "ephemeral",
